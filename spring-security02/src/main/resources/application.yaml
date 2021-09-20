@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/spring_security?serverTimezone=GMT%2B8
+    hikari:
+      maximum-pool-size: 20
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    host: 192.168.1.110
+    port: 6379
+    database: 0
+    timeout: 5000
+  messages:
+    basename: i18n/messages
+
+mybatis-plus:
+  type-aliases-package: io.github.cloudgyb.springsecurity02.**.entity
+
+
+token:
+  secret-key: Z2VuZzEyMzQ1Ng== #geng123456
+  algorithm: hs256
+  expire-in-seconds: 600
